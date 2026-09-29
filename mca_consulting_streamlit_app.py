@@ -57,15 +57,26 @@ if "case_catalog" not in st.session_state:
     else:
         st.session_state.case_catalog = pd.DataFrame([
             {
-                "Case_Title": "Gassy Convenience",
-                "Source": "NYU Stern MCA / Bain Power Round",
-                "Case_Type": "Opportunity Assessment / Digital",
-                "Difficulty": "Advanced",
-                "File_Name": "gassy_convenience.pdf",
-                "Start_Page": 139,
-                "End_Page": 142,
-                "Prompt": "Our client is a large U.S. retail chain that owns convenience stores located in gas stations across California. With the rise of just-walk-out (JWO) stores, they are interested in piloting JWO technology in one of their existing gas station stores over 3 years. How should our client evaluate this opportunity?",
-                "Exhibits": "Exhibit 1: Competitor landscape & gas station characteristics. Exhibit 2: 3-year discounted cash flow projections and Mekko chart breakdown."
+                "Case_Title": "Dark Sky",
+                "Source": "Kellogg 2023",
+                "Case_Type": "Growth / Opportunity Assessment",
+                "Difficulty": "Intermediate",
+                "File_Name": "Kellogg_2023.pdf",
+                "Start_Page": 157,
+                "End_Page": 162,
+                "Prompt": "Assess the opportunity for Dark Sky to maximize short-term growth in the defense aircraft sector.",
+                "Exhibits": "Exhibit 1: Historical unit sales and growth (2006-2014). Exhibit 2: Aircraft revenue projections[cite: 9]."
+            },
+            {
+                "Case_Title": "Colombian Hippos",
+                "Source": "Duke Fuqua",
+                "Case_Type": "Decision Analysis",
+                "Difficulty": "Foundational",
+                "File_Name": "Duke_Fuqua.pdf",
+                "Start_Page": 45,
+                "End_Page": 50,
+                "Prompt": "Evaluate the non-profit decision analysis regarding the population control and habitat management of invasive hippos in Colombia.",
+                "Exhibits": "Exhibit 1: Cost-benefit analysis of relocation vs. culling vs. sterilization."
             },
             {
                 "Case_Title": "Canadian Mobile Banking",
@@ -99,28 +110,6 @@ if "case_catalog" not in st.session_state:
                 "End_Page": 12,
                 "Prompt": "The client employs in-store beauty advisors and is considering launching a smartphone-based digital beauty advisor. What is the payback period of this investment?",
                 "Exhibits": "Exhibit 1: Revenue breakdown by channel (€120M total), advisor cost percentages, and app development cap-ex (€4.5M)."
-            },
-            {
-                "Case_Title": "Swipe Right for Canoodle",
-                "Source": "Duke Fuqua Consulting",
-                "Case_Type": "New Product / Pricing",
-                "Difficulty": "Foundational",
-                "File_Name": "Duke_Fuqua.pdf",
-                "Start_Page": 145,
-                "End_Page": 150,
-                "Prompt": "Client wants to introduce a premium subscription tier. Development costs are $500,000 over 6 months. Evaluate strategic fit and LTV.",
-                "Exhibits": "Exhibit 1: Competitor pricing tiers and projected customer LTV models."
-            },
-            {
-                "Case_Title": "Dark Sky",
-                "Source": "Kellogg Consulting Club",
-                "Case_Type": "Growth / Opportunity Assessment",
-                "Difficulty": "Intermediate",
-                "File_Name": "Kellogg_2023.pdf",
-                "Start_Page": 157,
-                "End_Page": 162,
-                "Prompt": "Assess the opportunity for Dark Sky to maximize short-term growth in the defense aircraft sector.",
-                "Exhibits": "Exhibit 1: Historical unit sales and growth (2006-2014). Exhibit 2: Aircraft revenue projections."
             }
         ])
 
@@ -194,7 +183,7 @@ if not st.session_state.user:
                         else:
                             st.error("Profile not found in database. Please contact the administrator.")
                     except Exception as e:
-                        st.error("Login failed. If credentials do not match, please reach out to the administrator and do not attempt unauthorized access.")
+                        st.error("Login failed. Please verify your credentials or contact the administrator.")
                 else:
                     if validate_email(email_input):
                         st.session_state.user = {"email": email_input, "cluster": "Cluster-0Cases-MBB"}
@@ -274,12 +263,12 @@ main_tab = st.sidebar.radio(
     ["Hub 1: Interview Prep", "Hub 2: Behavioral & Fit", "Hub 3: Master Case Bank", "Job Search Tracker", "Admin Control Center"]
 )
 
-# --- HUB 1: INTERVIEW PREP GUIDE ---
+# --- HUB 1: INTERVIEW PREP & CIA 4 GUIDE ---
 if main_tab == "Hub 1: Interview Prep":
     st.title("Hub 1: Comprehensive Interview Preparation Guide 📘")
-    st.write("Review the complete preparation study document covering consulting workstreams, standard case flow mechanics, and official Rotman 2026 scoring rubrics.")
+    st.write("Review the complete reference study documentation covering consulting workstreams, standard case flow mechanics, networking protocols, and official Rotman 2026 scoring rubrics[cite: 4, 7].")
     
-    if st.button("Load Full Study Document"):
+    if st.button("Load Full Study Material"):
         render_pdf_slice("CIA_4.pdf", 1, 100)
         
     st.markdown("---")
@@ -287,33 +276,33 @@ if main_tab == "Hub 1: Interview Prep":
     with col1:
         st.subheader("1. Standard Case Flow")
         st.markdown("""
-        * **Intro & Fit (5–10 min):** Career narrative & resume walkthrough.
-        * **Structuring (5 min):** Clarifying questions & MECE issue tree.
-        * **Deep Dive / Math (15 min):** Vocalized calculations & exhibit analysis.
-        * **Synthesis (5 min):** Recommendation-first closing with risks.
+        * **Intro & Fit (5–10 min):** Career narrative & resume walkthrough[cite: 4].
+        * **Structuring (5 min):** Clarifying questions & MECE issue tree[cite: 4].
+        * **Deep Dive / Math (15 min):** Vocalized calculations & exhibit analysis[cite: 4].
+        * **Synthesis (5 min):** Recommendation-first closing with risks[cite: 4].
         """)
     with col2:
         st.subheader("2. Everyday Consultant Tasks")
         st.markdown("""
-        * **Information Gathering:** Primary interviews and client data requests.
-        * **Problem Structuring:** Deconstructing complex challenges into testable workstreams.
-        * **Quantitative Modeling:** Financial, operational, and valuation scenario analysis.
-        * **Client Communication:** Executive slide decks and stakeholder alignment.
+        * **Information Gathering:** Primary interviews and client data requests[cite: 7].
+        * **Problem Structuring:** Deconstructing complex challenges into testable workstreams[cite: 7].
+        * **Quantitative Modeling:** Financial, operational, and valuation scenario analysis[cite: 7].
+        * **Client Communication:** Executive slide decks and stakeholder alignment[cite: 7].
         """)
     with col3:
         st.subheader("3. Rotman 2026 Rubric")
         st.markdown("""
-        * **Clarification & Goal (5 pts):** Metric targets and objective validation.
-        * **Framework & Structure (10 pts):** Tailored MECE issue trees.
-        * **Analytical Rigor (10 pts):** Vocalized, error-free mental math.
-        * **Business Intuition (10 pts):** Pragmatic trade-offs and creative ideas.
-        * **Synthesis (5 pts):** Clear recommendation-first closing.
+        * **Clarification & Goal (5 pts):** Metric targets and objective validation[cite: 4].
+        * **Framework & Structure (10 pts):** Tailored MECE issue trees[cite: 4].
+        * **Analytical Rigor (10 pts):** Vocalized, error-free mental math[cite: 4].
+        * **Business Intuition (10 pts):** Pragmatic trade-offs and creative ideas[cite: 4].
+        * **Synthesis (5 pts):** Clear recommendation-first closing[cite: 4].
         """)
 
 # --- HUB 2: BEHAVIORAL & FIT HUB ---
 elif main_tab == "Hub 2: Behavioral & Fit":
     st.title("Hub 2: Behavioral & Fit Hub 🎯")
-    st.write("Master personal experience interviews using the P.A.R.T. (Problem, Action, Result, Takeaway) framework and test your responses against our live AI evaluator.")
+    st.write("Master personal experience interviews using the P.A.R.T. (Problem, Action, Result, Takeaway) framework and test your responses against our live AI evaluator[cite: 5].")
     
     st.subheader("Question Bank")
     q_options = [
@@ -337,6 +326,7 @@ elif main_tab == "Hub 2: Behavioral & Fit":
     st.markdown("---")
     st.subheader("AI Behavioral Answer Evaluator")
     
+    # Active question banner displayed directly above the evaluator answer box
     st.info(f"**Active Question:** {st.session_state.active_question}")
     
     api_key_input = st.text_input("OpenAI API Key (Connect your ChatGPT account for live feedback):", type="password")
@@ -363,7 +353,7 @@ elif main_tab == "Hub 2: Behavioral & Fit":
 # --- HUB 3: MASTER CASE BANK ---
 elif main_tab == "Hub 3: Master Case Bank":
     st.title("Hub 3: Master Case Bank Repository 📁")
-    st.write("Browse multiple cases-source casebooks.")
+    st.write("Browse cases compiled from multi-source casebooks (Wharton, Kellogg, Duke Fuqua, Columbia, McKinsey). Click any case to view complete prompts, interviewer guidance, and exhibits.")
     
     catalog_df = st.session_state.case_catalog
     
@@ -441,10 +431,10 @@ elif main_tab == "Admin Control Center":
     if admin_pwd == "RotmanAdmin2026!":
         st.success("Admin Access Granted!")
         
-        st.subheader("Automated Pairing Engine")
+        st.subheader("Sunday Automated Pairing Engine")
         st.write("Match cohort members within clusters based on overlapping availability.")
         
-        if st.button("Execute Matching"):
+        if st.button("Execute Sunday Matching"):
             try:
                 users = db.child("users").get().val() if db else None
                 if users:
