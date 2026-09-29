@@ -1,6 +1,6 @@
-streamlit==1.32.0
-pandas==2.2.1
-openpyxl==3.1.2
-pymupdf==1.23.21
-openai==1.14.0
-pyrebase4==4.7.1
+streamlit
+pandas
+openpyxl
+pymupdf
+openai
+pyrebase4
