@@ -64,7 +64,7 @@ if "case_catalog" not in st.session_state:
                 "File_Name": "gassy_convenience.pdf",
                 "Start_Page": 139,
                 "End_Page": 142,
-                "Prompt": "Our client is a large U.S. retail chain that owns convenience stores located in gas stations across California. With the rise of just-walk-out (JWO) stores (e.g., Amazon Go), they are interested in piloting JWO technology in one of their existing gas station stores over 3 years. How should our client evaluate this opportunity?",
+                "Prompt": "Our client is a large U.S. retail chain that owns convenience stores located in gas stations across California. With the rise of just-walk-out (JWO) stores, they are interested in piloting JWO technology in one of their existing gas station stores over 3 years. How should our client evaluate this opportunity?",
                 "Exhibits": "Exhibit 1: Competitor landscape & gas station characteristics. Exhibit 2: 3-year discounted cash flow projections and Mekko chart breakdown."
             },
             {
@@ -196,7 +196,6 @@ if not st.session_state.user:
                     except Exception as e:
                         st.error("Login failed. If credentials do not match, please reach out to the administrator and do not attempt unauthorized access.")
                 else:
-                    # Fallback offline mode if firebase is offline
                     if validate_email(email_input):
                         st.session_state.user = {"email": email_input, "cluster": "Cluster-0Cases-MBB"}
                         st.rerun()
@@ -210,13 +209,12 @@ if not st.session_state.user:
             password_signup = st.text_input("Secure Password", type="password", help="Min 8 chars, 1 uppercase, 1 lowercase, 1 number, 1 special character")
             
             st.markdown("### Profile Setup & Recruiting Survey")
-            # Survey questions reframed natively for clustering
             exp = st.selectbox("1. Approximately how many live, full-length mock case interviews have you completed as the interviewee?", ["0 Cases", "1–5 Cases", "6–15 Cases", "16+ Cases"])
             track = st.selectbox("2. Which firm archetypes are your primary recruitment priority?", ["MBB (McKinsey, BCG, Bain)", "Big 4 Strategy (Deloitte S&O, EY-P)", "Tier 2 Strategy (Oliver Wyman, Kearney)", "Boutique Strategy", "Internal Corporate Strategy"])
             focus = st.selectbox("3. Which dimension of casing is currently your primary focus for active improvement?", ["Structuring & Issue Trees", "Quantitative Analysis & Math", "Chart & Data Interpretation", "Brainstorming & Business Intuition", "Synthesis & Recommendation"])
             freq = st.selectbox("4. What is your weekly live-practice bandwidth commitment?", ["1 Case/Week", "2 Cases/Week", "3+ Cases/Week"])
             time_slot = st.selectbox("5. Select your preferred weekly practice time blocks:", ["Weekday Mornings", "Weekday Evenings", "Weekend Slots"])
-            readiness = st.selectbox("6. Administration comfort level:", ["Comfortable Giving & Receiving Cases", "Prefer Receiving Cases Only (Beginner)"])
+            readiness = st.selectbox("6. Administration comfort level:", ["Comfortable Giving & Receiving Cases", "Prefer Receiving Only (Beginner)"])
             
             submit_signup = st.form_submit_button("Complete Profile & Enter Hub")
             
@@ -276,12 +274,12 @@ main_tab = st.sidebar.radio(
     ["Hub 1: Interview Prep", "Hub 2: Behavioral & Fit", "Hub 3: Master Case Bank", "Job Search Tracker", "Admin Control Center"]
 )
 
-# --- HUB 1: INTERVIEW PREP & CIA 4 GUIDE ---
+# --- HUB 1: INTERVIEW PREP GUIDE ---
 if main_tab == "Hub 1: Interview Prep":
     st.title("Hub 1: Comprehensive Interview Preparation Guide 📘")
-    st.write("Review the complete CIA 4 preparation study document covering consulting workstreams, standard case flow mechanics, and official Rotman 2026 scoring rubrics.")
+    st.write("Review the complete preparation study document covering consulting workstreams, standard case flow mechanics, and official Rotman 2026 scoring rubrics.")
     
-    if st.button("Load Full CIA 4 Study Document"):
+    if st.button("Load Full Study Document"):
         render_pdf_slice("CIA_4.pdf", 1, 100)
         
     st.markdown("---")
@@ -339,7 +337,6 @@ elif main_tab == "Hub 2: Behavioral & Fit":
     st.markdown("---")
     st.subheader("AI Behavioral Answer Evaluator")
     
-    # Active question display box that updates dynamically with button clicks
     st.info(f"**Active Question:** {st.session_state.active_question}")
     
     api_key_input = st.text_input("OpenAI API Key (Connect your ChatGPT account for live feedback):", type="password")
@@ -366,7 +363,7 @@ elif main_tab == "Hub 2: Behavioral & Fit":
 # --- HUB 3: MASTER CASE BANK ---
 elif main_tab == "Hub 3: Master Case Bank":
     st.title("Hub 3: Master Case Bank Repository 📁")
-    st.write("Browse multi-source casebooks (Wharton, Kellogg, Columbia, ESADE, Duke, Darden, McGill, McKinsey) with uniform difficulty levels. Click any case to view complete prompts and exhibits directly from the PDFs.")
+    st.write("Browse multiple cases-source casebooks.")
     
     catalog_df = st.session_state.case_catalog
     
@@ -437,56 +434,57 @@ elif main_tab == "Job Search Tracker":
 # --- ADMIN CONTROL CENTER ---
 elif main_tab == "Admin Control Center":
     st.title("Admin Control Center 🔒")
-    st.write("Restricted administrator oversight. Enter the secure password to manage cohorts and execute peer matching)
+    st.write("Restricted administrator oversight. Enter the secure password to manage cohorts and execute Sunday peer matching.")
+    
     admin_pwd = st.text_input("Enter Administrator Password:", type="password")
-
-if admin_pwd == "RotmanAdmin2026!":
-    st.success("Admin Access Granted!")
     
-    st.subheader("Sunday Automated Pairing Engine")
-    st.write("Match cohort members within clusters based on overlapping availability.")
-    
-    if st.button("Execute Sunday Matching"):
+    if admin_pwd == "RotmanAdmin2026!":
+        st.success("Admin Access Granted!")
+        
+        st.subheader("Automated Pairing Engine")
+        st.write("Match cohort members within clusters based on overlapping availability.")
+        
+        if st.button("Execute Matching"):
+            try:
+                users = db.child("users").get().val() if db else None
+                if users:
+                    profiles = list(users.values())
+                    if len(profiles) < 2:
+                        st.warning("At least 2 profiles are required to generate peer pairings.")
+                    else:
+                        random.shuffle(profiles)
+                        pairs = []
+                        for i in range(0, len(profiles) - 1, 2):
+                            pairs.append((profiles[i]["email"], profiles[i+1]["email"]))
+                        st.markdown("### Generated Pairings for Next Week:")
+                        for idx, p in enumerate(pairs, 1):
+                            st.write(f"**Pair {idx}:** {p[0]} ↔️ {p[1]}")
+                else:
+                    st.info("No registered users found in the database.")
+            except Exception as e:
+                st.error(f"Error fetching database: {e}")
+                    
+        st.markdown("---")
+        st.subheader("Registered Student Roster")
         try:
             users = db.child("users").get().val() if db else None
             if users:
-                profiles = list(users.values())
-                if len(profiles) < 2:
-                    st.warning("At least 2 profiles are required to generate peer pairings.")
-                else:
-                    random.shuffle(profiles)
-                    pairs = []
-                    for i in range(0, len(profiles) - 1, 2):
-                        pairs.append((profiles[i]["email"], profiles[i+1]["email"]))
-                    st.markdown("### Generated Pairings for Next Week:")
-                    for idx, p in enumerate(pairs, 1):
-                        st.write(f"**Pair {idx}:** {p[0]} ↔️ {p[1]}")
+                roster_data = []
+                for p in users.values():
+                    if "email" in p and "survey" in p:
+                        roster_data.append({
+                            "Email": p["email"],
+                            "Cluster": p["cluster"],
+                            "Target Track": p["survey"]["targetTrack"],
+                            "Experience": p["survey"]["experienceBaseline"],
+                            "Practice Freq": p["survey"]["practiceFrequency"]
+                        })
+                if roster_data:
+                    st.dataframe(pd.DataFrame(roster_data), use_container_width=True)
             else:
-                st.info("No registered users found in database (or running offline fallback).")
+                st.info("No student profiles registered yet.")
         except Exception as e:
-            st.error(f"Error fetching database: {e}")
-                
-    st.markdown("---")
-    st.subheader("Registered Student Roster")
-    try:
-        users = db.child("users").get().val() if db else None
-        if users:
-            roster_data = []
-            for p in users.values():
-                if "email" in p and "survey" in p:
-                    roster_data.append({
-                        "Email": p["email"],
-                        "Cluster": p["cluster"],
-                        "Target Track": p["survey"]["targetTrack"],
-                        "Experience": p["survey"]["experienceBaseline"],
-                        "Practice Freq": p["survey"]["practiceFrequency"]
-                    })
-            if roster_data:
-                st.dataframe(pd.DataFrame(roster_data), use_container_width=True)
-        else:
-            st.info("No student profiles registered yet.")
-    except Exception as e:
-        st.error(f"Error reading database: {e}")
-        
-elif admin_pwd:
-    st.error("Incorrect administrator password.")
+            st.error(f"Error reading database: {e}")
+            
+    elif admin_pwd:
+        st.error("Incorrect administrator password.")
