@@ -1,4 +1,4 @@
-Case_Title,Source,Case_Type,Difficulty,File_Name,Start_Page,End_Page,Prompt,Exhibits
+Case_Title,Source,Case_Type,Difficulty,File_Name,Start_Page,End_Page
 Market Sizing,NYU Stern 2008,Strategy,Intermediate,NYU Stern 2008.pdf,5,6
 Business Transformation,NYU Stern 2008,Strategy,Intermediate,NYU Stern 2008.pdf,7,8
 New business (unconventional context),NYU Stern 2008,Strategy,Intermediate,NYU Stern 2008.pdf,9,11
@@ -38,8 +38,6 @@ Retailer Business Restaurant,Michigan Ross 2011,Retail,Advanced,Michigan Ross 20
 Electric Auto Manufacturer ,Michigan Ross 2011,Automotive,Advanced,Michigan Ross 2011.pdf,135,145
 Pharmacy in Grocery Store,Michigan Ross 2011,Strategy,Intermediate,Michigan Ross 2011.pdf,146,150
 Lonestar Oil,Michigan Ross 2011,Energy Retail,Intermediate,Michigan Ross 2011.pdf,151,155
-¬© 2013 Kellogg Consulting Club  -- All Rights Rese,Kellogg 2013,overviews,Intermediate,Kellogg 2013.pdf,3,4
-Lays out the ideal structure for the case and includes hints on how to walk through,Kellogg 2013,Strategy,Intermediate,Kellogg 2013.pdf,5,6
 GoNet Internet Service Provider,Kellogg 2013,Technology,Intermediate,Kellogg 2013.pdf,47,51
 Maine Apples,Kellogg 2013,Consumer Goods,Intermediate,Kellogg 2013.pdf,52,56
 Orrington Office Supplies (OOS),Kellogg 2013,Consumer Products,Intermediate,Kellogg 2013.pdf,57,64
@@ -61,7 +59,6 @@ DigiBooks Inc.,Kellogg 2013,Developing a new,Foundational,Kellogg 2013.pdf,152,1
 After School Programming,Kellogg 2013,,Advanced,Kellogg 2013.pdf,158,167
 Dark Sky Co.,Kellogg 2013,,Foundational,Kellogg 2013.pdf,168,174
 Health Coaches,Kellogg 2013,Healthcare,Intermediate,Kellogg 2013.pdf,175,180
-Are the costs associated with the DM program justified by the savings?,Kellogg 2013,Strategy,Intermediate,Kellogg 2013.pdf,176,180
 Wine & Co.,Kellogg 2013,CPG,Intermediate,Kellogg 2013.pdf,181,185
 Healthy Foods Co.,Kellogg 2013,CPG,Intermediate,Kellogg 2013.pdf,186,192
 High Q Plastics,Kellogg 2013,Industrial Goods,Intermediate,Kellogg 2013.pdf,193,200
@@ -122,18 +119,10 @@ Vidi-Games,Wharton 2010,Strategy,Intermediate,Wharton 2010.pdf,112,117
 Big School Bus Company,Wharton 2010,Strategy,Intermediate,Wharton 2010.pdf,118,122
 American Beauty Company,Wharton 2010,Strategy,Intermediate,Wharton 2010.pdf,123,127
 Electro Chargers,Wharton 2025,Strategy,Intermediate,Wharton 2025.pdf,82,95
-Happy Bellies,Wharton 2025,Strategy,Advanced,Wharton 2025.pdf,96,97
-"I. Background, Setup, and Recap",Wharton 2025,strikes,Intermediate,Wharton 2025.pdf,98,105
-Happy Bellies - Exhibit A,Wharton 2025,average,Intermediate,Wharton 2025.pdf,106,107
+Happy Bellies,Wharton 2025,Strategy,Advanced,Wharton 2025.pdf,96,107
 Smart Radiators,Wharton 2025,Strategy,Intermediate,Wharton 2025.pdf,108,119
-Compress and Expand,Wharton 2025,Industrial Goods,Intermediate,Wharton 2025.pdf,120,127
-IV. Brainstorming,Wharton 2025,magazines,Intermediate,Wharton 2025.pdf,128,129
-V. Synthesis and Recommendation,Wharton 2025,due to highest,Intermediate,Wharton 2025.pdf,130,132
-PSU Bank Co.,Wharton 2025,Financial Services,Advanced,Wharton 2025.pdf,133,136
-Case Questions,Wharton 2025,by different,Intermediate,Wharton 2025.pdf,137,139
-IV. Brainstorming,Wharton 2025,in terms of diversity,Intermediate,Wharton 2025.pdf,140,141
-IV. Math Exhibits & Analysis,Wharton 2025,in terms of performance,Intermediate,Wharton 2025.pdf,142,142
-IV. Math Exhibits & Analysis,Wharton 2025,average,Intermediate,Wharton 2025.pdf,143,146
+Compress and Expand,Wharton 2025,Industrial Goods,Intermediate,Wharton 2025.pdf,120,132
+PSU Bank Co.,Wharton 2025,Financial Services,Advanced,Wharton 2025.pdf,133,146
 Fruit Drink Co.,Wharton 2025,Consumer Packaged Goods,Foundational,Wharton 2025.pdf,147,156
 Race to the Bottom,Wharton 2025,Airlines,Intermediate,Wharton 2025.pdf,157,168
 Coolant Co.,Wharton 2025,Consumer Electronics,Intermediate,Wharton 2025.pdf,169,180
@@ -147,107 +136,61 @@ New Rubber Plant,Wharton 2025,Public Sector,Advanced,Wharton 2025.pdf,238,248
 University Program,Wharton 2025,Education,Intermediate,Wharton 2025.pdf,249,259
 Biopharma Outsourcing,Wharton 2025,Pharmaceuticals,Intermediate,Wharton 2025.pdf,260,266
 Voter Turnout,Wharton 2025,Public Sector,Advanced,Wharton 2025.pdf,267,279
-#1 Gift Wrapping Paper,Rotman 2026,"Consumer Products
-Type",Intermediate,Rotman 2026.pdf,21,26
-#2 Candy Manufacturer,Rotman 2026,"Consumer Products
-Type",Intermediate,Rotman 2026.pdf,27,35
-#3 Multipurpose Tool,Rotman 2026,"Consumer Products
-Type",Intermediate,Rotman 2026.pdf,36,40
-#4 Recreational Aircraft,Rotman 2026,Aircraft manufacturing,Intermediate,Rotman 2026.pdf,41,43
-#5 Sheep Auction,Rotman 2026,"Other
-Type",Intermediate,Rotman 2026.pdf,44,51
-#6 Scotch Bar,Rotman 2026,"Travel & Leisure
-Type",Intermediate,Rotman 2026.pdf,52,57
-#7 American Beauty Company,Rotman 2026,"Consumer Products
-Type",Intermediate,Rotman 2026.pdf,58,62
-#8 Gas Station,Rotman 2026,"Consumer Products
-Type",Intermediate,Rotman 2026.pdf,63,68
-#9 Zoo Co,Rotman 2026,"Financial services
-Type",Intermediate,Rotman 2026.pdf,69,75
-#10 Brazilian Manufacturer,Rotman 2026,"Manufacturing
-Type",Intermediate,Rotman 2026.pdf,76,82
-#11 SPLAT!,Rotman 2026,"Consumer Products
-Type",Intermediate,Rotman 2026.pdf,83,87
-#12 HVAC Service Provider,Rotman 2026,"Energy
-Type",Intermediate,Rotman 2026.pdf,88,91
-#13 Vidi-Games,Rotman 2026,analysis and,Intermediate,Rotman 2026.pdf,92,98
-#14 Molds R Us,Rotman 2026,"Consumer Products
-Type",Intermediate,Rotman 2026.pdf,99,106
-#15 The Coffee Grind,Rotman 2026,"Consumer Products
-Type",Intermediate,Rotman 2026.pdf,107,115
-#16 - Winter Olympics Bidding,Rotman 2026,Valuation,Intermediate,Rotman 2026.pdf,116,122
-#17 Butcher Shop,Rotman 2026,"Manufacturing
-Type",Intermediate,Rotman 2026.pdf,123,125
-#18 Everlasting Light Bulb,Rotman 2026,"Consumer Goods
-Type",Intermediate,Rotman 2026.pdf,126,129
-#19 Vie Tire,Rotman 2026,"Consumer Goods
-Type",Intermediate,Rotman 2026.pdf,130,133
-#20 Megabank Under-Penetration,Rotman 2026,"Financial Services
-Type",Intermediate,Rotman 2026.pdf,134,137
-#21 Trains in Spain,Rotman 2026,"Transportation
-Type",Intermediate,Rotman 2026.pdf,138,141
-#22,Rotman 2026,"Financial Services
-Type",Intermediate,Rotman 2026.pdf,142,146
-#23 Upscale Restaurant,Rotman 2026,"Travel & Leisure
-Type",Intermediate,Rotman 2026.pdf,147,151
-#24 Jamaican Land Investment,Rotman 2026,Strategy,Intermediate,Rotman 2026.pdf,152,158
-#25 Grape Control Systems,Rotman 2026,"Industrial Goods
-Type",Intermediate,Rotman 2026.pdf,159,163
-#26 New Rubber Plant Investment,Rotman 2026,"Industrial Goods
-Type",Intermediate,Rotman 2026.pdf,164,170
-#27 Wealth Management,Rotman 2026,"Financial Services
-Type",Intermediate,Rotman 2026.pdf,171,179
-#28 A+ Airline Co.,Rotman 2026,"Airline
-Type",Intermediate,Rotman 2026.pdf,180,187
-#29 Old Pharma,Rotman 2026,"Pharmaceuticals
-Type
-M&A",Intermediate,Rotman 2026.pdf,188,196
-#30 Grocer Co.,Rotman 2026,"Consumer Goods
-Type",Intermediate,Rotman 2026.pdf,197,204
-#31 Electronics Retailer,Rotman 2026,"Retail
-Type",Intermediate,Rotman 2026.pdf,205,209
-#32 Frontier Adventure Racing Inc.,Rotman 2026,"Travel & Leisure
-Type",Intermediate,Rotman 2026.pdf,210,216
-#33 Competitive Threat in Cookies,Rotman 2026,"Consumer Products
-Type",Intermediate,Rotman 2026.pdf,217,223
-#34 Bell Computer Co,Rotman 2026,"Technology
-Type",Intermediate,Rotman 2026.pdf,224,233
-#35 Sheep Of Wall Street Co.‚Äã,Rotman 2026,"Financial services 
-Type",Intermediate,Rotman 2026.pdf,234,242
-#36 Webflix,Rotman 2026,Pricing Strategy,Intermediate,Rotman 2026.pdf,243,251
-#37 Death Valley Energy,Rotman 2026,"ESG
-Type",Intermediate,Rotman 2026.pdf,252,260
-#38 Beer Burger,Rotman 2026,"ESG
-Type",Intermediate,Rotman 2026.pdf,261,269
-#39 Mayor Of Maine,Rotman 2026,"Public Sector
-Type",Intermediate,Rotman 2026.pdf,270,279
-#40 Doctors Within US Borders,Rotman 2026,"Market Study –
-Growth",Intermediate,Rotman 2026.pdf,280,288
-#41 TIKTAC CO,Rotman 2026,"Tech
-Type",Intermediate,Rotman 2026.pdf,289,297
-#42 Whatcha Say Research‚Äã,Rotman 2026,"Tech
-Type",Intermediate,Rotman 2026.pdf,298,306
-#43 Phuture,Rotman 2026,"Tech
-Type",Intermediate,Rotman 2026.pdf,307,316
-#44 Cloudforce,Rotman 2026,"Tech
-Type",Intermediate,Rotman 2026.pdf,317,325
+Gift Wrapping Paper,Rotman 2026,"Consumer Products",Intermediate,Rotman 2026.pdf,21,26
+Candy Manufacturer,Rotman 2026,"Consumer Products",Intermediate,Rotman 2026.pdf,27,35
+Multipurpose Tool,Rotman 2026,"Consumer Products",Intermediate,Rotman 2026.pdf,36,40
+Recreational Aircraft,Rotman 2026,Aircraft manufacturing,Intermediate,Rotman 2026.pdf,41,43
+Sheep Auction,Rotman 2026,"Other",Intermediate,Rotman 2026.pdf,44,51
+Scotch Bar,Rotman 2026,"Travel & Leisure",Intermediate,Rotman 2026.pdf,52,57
+American Beauty Company,Rotman 2026,"Consumer Products",Intermediate,Rotman 2026.pdf,58,62
+Gas Station,Rotman 2026,"Consumer Products",Intermediate,Rotman 2026.pdf,63,68
+Zoo Co,Rotman 2026,"Financial services",Intermediate,Rotman 2026.pdf,69,75
+Brazilian Manufacturer,Rotman 2026,"Manufacturing",Intermediate,Rotman 2026.pdf,76,82
+SPLAT!,Rotman 2026,"Consumer Products",Intermediate,Rotman 2026.pdf,83,87
+HVAC Service Provider,Rotman 2026,"Energy",Intermediate,Rotman 2026.pdf,88,91
+Vidi-Games,Rotman 2026,analysis and,Intermediate,Rotman 2026.pdf,92,98
+Molds R Us,Rotman 2026,"Consumer Products",Intermediate,Rotman 2026.pdf,99,106
+The Coffee Grind,Rotman 2026,"Consumer Products",Intermediate,Rotman 2026.pdf,107,115
+Winter Olympics Bidding,Rotman 2026,Valuation,Intermediate,Rotman 2026.pdf,116,122
+Butcher Shop,Rotman 2026,"Manufacturing",Intermediate,Rotman 2026.pdf,123,125
+Everlasting Light Bulb,Rotman 2026,"Consumer Goods",Intermediate,Rotman 2026.pdf,126,129
+Vie Tire,Rotman 2026,"Consumer Goods",Intermediate,Rotman 2026.pdf,130,133
+Megabank Under-Penetration,Rotman 2026,"Financial Services",Intermediate,Rotman 2026.pdf,134,137
+Trains in Spain,Rotman 2026,"Transportation",Intermediate,Rotman 2026.pdf,138,141
+Money Bank Call Centre,Rotman 2026,"Financial Services",Intermediate,Rotman 2026.pdf,142,146
+Upscale Restaurant,Rotman 2026,"Travel & Leisure",Intermediate,Rotman 2026.pdf,147,151
+Jamaican Land Investment,Rotman 2026,Strategy,Intermediate,Rotman 2026.pdf,152,158
+Grape Control Systems,Rotman 2026,"Industrial Goods",Intermediate,Rotman 2026.pdf,159,163
+New Rubber Plant Investment,Rotman 2026,"Industrial Goods",Intermediate,Rotman 2026.pdf,164,170
+Wealth Management,Rotman 2026,"Financial Services",Intermediate,Rotman 2026.pdf,171,179
+A+ Airline Co.,Rotman 2026,"Airline",Intermediate,Rotman 2026.pdf,180,187
+Old Pharma,Rotman 2026,"Pharmaceuticals M&A",Intermediate,Rotman 2026.pdf,188,196
+Grocer Co.,Rotman 2026,"Consumer Goods",Intermediate,Rotman 2026.pdf,197,204
+Electronics Retailer,Rotman 2026,"Retail",Intermediate,Rotman 2026.pdf,205,209
+Frontier Adventure Racing Inc.,Rotman 2026,"Travel & Leisure",Intermediate,Rotman 2026.pdf,210,216
+Competitive Threat in Cookies,Rotman 2026,"Consumer Products",Intermediate,Rotman 2026.pdf,217,223
+Bell Computer Co,Rotman 2026,"Technology",Intermediate,Rotman 2026.pdf,224,233
+Sheep Of Wall Street Co.‚Äã,Rotman 2026,"Financial services ",Intermediate,Rotman 2026.pdf,234,242
+Webflix,Rotman 2026,Pricing Strategy,Intermediate,Rotman 2026.pdf,243,251
+Death Valley Energy,Rotman 2026,"ESG",Intermediate,Rotman 2026.pdf,252,260
+Beer Burger,Rotman 2026,"ESG",Intermediate,Rotman 2026.pdf,261,269
+Mayor Of Maine,Rotman 2026,"Public Sector",Intermediate,Rotman 2026.pdf,270,279
+Doctors Within US Borders,Rotman 2026,"Market Study – Growth",Intermediate,Rotman 2026.pdf,280,288
+TIKTAC CO,Rotman 2026,"Tech",Intermediate,Rotman 2026.pdf,289,297
+Whatcha Say Research‚Äã,Rotman 2026,"Tech",Intermediate,Rotman 2026.pdf,298,306
+Phuture,Rotman 2026,"Tech",Intermediate,Rotman 2026.pdf,307,316
+Cloudforce,Rotman 2026,"Tech",Intermediate,Rotman 2026.pdf,317,325
 EnerForce,NYU Stern 2016,Energy,Intermediate,NYU Stern 2016.pdf,34,44
 Drug Profitability,NYU Stern 2016,Pharma,Advanced,NYU Stern 2016.pdf,45,53
 Regional Jet Market,NYU Stern 2016,Airlines,Intermediate,NYU Stern 2016.pdf,54,63
-BankCo Online Banking,NYU Stern 2016,"Consumer 
-Banking",Advanced,NYU Stern 2016.pdf,64,71
+BankCo Online Banking,NYU Stern 2016,"Consumer Banking",Advanced,NYU Stern 2016.pdf,64,71
 Made to Measure,NYU Stern 2016,Leatherworking,Foundational,NYU Stern 2016.pdf,72,78
 Sunshine Power,NYU Stern 2016,Profitability,Intermediate,NYU Stern 2016.pdf,79,85
-Beijing International Airport,NYU Stern 2016,"M&A 
-Fit Questions",Intermediate,NYU Stern 2016.pdf,86,90
-Grad-U-Date,NYU Stern 2016,"Online 
-Dating",Intermediate,NYU Stern 2016.pdf,91,99
-A Sticky Paper Situation,NYU Stern 2016,"Paper and 
-Pulp",Advanced,NYU Stern 2016.pdf,100,105
-Sports Bar,NYU Stern 2016,"Food 
-Services",Intermediate,NYU Stern 2016.pdf,106,112
-A PE and a Soda,NYU Stern 2016,"Private 
-Equity",Intermediate,NYU Stern 2016.pdf,113,119
+Beijing International Airport,NYU Stern 2016,"M&A Fit Questions",Intermediate,NYU Stern 2016.pdf,86,90
+Grad-U-Date,NYU Stern 2016,"Online Dating",Intermediate,NYU Stern 2016.pdf,91,99
+A Sticky Paper Situation,NYU Stern 2016,"Paper and Pulp",Advanced,NYU Stern 2016.pdf,100,105
+Sports Bar,NYU Stern 2016,"Food Services",Intermediate,NYU Stern 2016.pdf,106,112
+A PE and a Soda,NYU Stern 2016,"Private Equity",Intermediate,NYU Stern 2016.pdf,113,119
 Botox,NYU Stern 2016,Pharma,Intermediate,NYU Stern 2016.pdf,120,126
 Bike Helmets,NYU Stern 2016,Manufacturing,Foundational,NYU Stern 2016.pdf,127,131
 Skin Care Market (Deloitte),NYU Stern 2016,Cosmetics,Intermediate,NYU Stern 2016.pdf,132,137
