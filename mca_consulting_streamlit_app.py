@@ -353,7 +353,7 @@ elif main_tab == "Hub 2: Behavioral & Fit":
 # --- HUB 3: MASTER CASE BANK ---
 elif main_tab == "Hub 3: Master Case Bank":
     st.title("Hub 3: Master Case Bank Repository 📁")
-    st.write("Browse cases compiled from multi-source casebooks (Wharton, Kellogg, Duke Fuqua, Columbia, McKinsey). Click any case to view complete prompts, interviewer guidance, and exhibits.")
+    st.write("Browse cases and click any case to view complete prompts, interviewer guidance, and exhibits.")
     
     catalog_df = st.session_state.case_catalog
     
