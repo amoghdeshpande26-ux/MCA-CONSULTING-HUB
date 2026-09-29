@@ -371,7 +371,8 @@ elif main_tab == "Hub 3: Master Case Bank":
             st.write(f"**Prompt:** {prompt}")
             st.write(f"**Exhibits & Data Details:** {exhibits}")
             
-            if st.button("Open Full Case Pages & Exhibits", key=f"view_{title}_{_)"):
+            # FIXED KEY BELOW: changed {_) to {_}
+            if st.button("Open Full Case Pages & Exhibits", key=f"view_{title}_{_}"):
                 if "File_Name" in row and pd.notna(row["File_Name"]):
                     start_pg = int(row.get("Start_Page", 1))
                     end_pg = int(row.get("End_Page", start_pg + 5))
@@ -379,7 +380,7 @@ elif main_tab == "Hub 3: Master Case Bank":
                     render_pdf_slice(row["File_Name"], start_pg, end_pg)
                 else:
                     st.error("File mapping missing for this case.")
-
+                    
 # --- JOB SEARCH TRACKER ---
 elif main_tab == "Hub 3: Master Case Bank" == False and main_tab == "Job Search Tracker": # handled correctly below
     pass
